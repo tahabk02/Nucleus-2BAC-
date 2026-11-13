@@ -1,0 +1,6 @@
+{
+  "name": "Nucleus 2BAC — Interactive 3D Nuclear Physics",
+  "description": "Cinematic 3D interactive physics experience covering 2BAC Nuclear Physics: atomic structure, Soddy's laws, radioactive decay, Segré diagram, and decay curves.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

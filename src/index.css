@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg-deep: #07090f;
+  --color-bg-panel: #0b0f19;
+  --color-accent-cerulean: #38bdf8;
+  --color-accent-cyan: #00e5ff;
+  --color-accent-amber: #f5b041;
+  --color-accent-proton: #f96449;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #07090f;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.hud-scroll::-webkit-scrollbar-track {
+  background: rgba(7, 9, 15, 0.7);
+}
+
+.hud-scroll::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 9999px;
+}
+
+.hud-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.52);
+}
+
+.katex {
+  font-size: 1.04em;
+  color: inherit;
+}
+
+.katex-display {
+  margin: 0.35rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+input[type='range'].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #07090f;
+  height: 5px;
+  border-radius: 9999px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+input[type='range'].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #38bdf8;
+  border: 2px solid #07090f;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.55);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type='range'].studio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  background: #e0f2fe;
+}
+
+input[type='range'].studio-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #38bdf8;
+  border: 2px solid #07090f;
+  cursor: pointer;
+}
